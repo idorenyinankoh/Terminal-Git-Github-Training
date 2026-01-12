@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git-Terminal Course Registry</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --tile-bg: #161b22;
+            --border-color: #30363d;
+            --terminal-green: #3fb950;
+            --text-dim: #8b949e;
+            --text-bright: #f0f6fc;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-bright);
+            font-family: 'SF Mono', Monaco, Consolas, "Liberation Mono", monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: var(--terminal-green);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .instructions {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* The Scrollable Container */
+        .registry-container {
+            width: 100%;
+            max-width: 800px;
+            height: 600px; /* Fixed height to make it scrollable */
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* Independent Tile Styling */
+        .registry-tile {
+            background-color: var(--tile-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: border-color 0.2s;
+        }
+
+        .registry-tile:hover {
+            border-color: var(--terminal-green);
+        }
+
+        .tile-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .student-name {
+            color: var(--terminal-green);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .timestamp {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        .comment-text {
+            color: var(--text-bright);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Custom Scrollbar */
+        .registry-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .registry-container::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Git-Terminal Course Registry</h1>
+        <p class="instructions">Copy a tile block, add your info, and push your PR.</p>
+    </div>
+
+    <div class="registry-container">
+
+        <div class="registry-tile">
+            <div class="tile-top">
+                <span class="student-name">@idorenyinankoh</span>
+                <span class="timestamp">2026-01-12 11:30</span>
+            </div>
+            <div class="comment-text">
+                Hi there! I created this repository to help students practice Git commands in a terminal environment. Feel free to clone it and add your name below!
+            </div>
+        </div>
+        <div class="registry-tile">
+            <div class="tile-top">
+                <span class="student-name">@YourNameHere</span>
+                <span class="timestamp">YYYY-MM-DD HH:MM</span>
+            </div>
+            <div class="comment-text">
+                I have successfully cloned the repo and registered my name in the terminal registry.
+            </div>
+        </div>
+        <div class="registry-tile" style="opacity: 0.5;">
+            <div class="tile-top">
+                <span class="student-name">@Future_Student</span>
+                <span class="timestamp">Upcoming...</span>
+            </div>
+            <div class="comment-text">Waiting for the next contribution.</div>
+        </div>
+
+    </div>
+
+    <p style="color: var(--text-dim); margin-top: 20px; font-size: 0.8rem;">
+        Total Entries: 3
+    </p>
+
+</body>
+</html>
